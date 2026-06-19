@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bisutería Tito — Accesorios hechos para brillar</title>
+<meta name="description" content="Tienda de bisutería: aretes, collares, pulseras y anillos. Pago con PayPal, transferencia bancaria o contra reembolso.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ============ ENCABEZADO ============ -->
+<header class="topbar">
+  <div class="topbar__inner">
+    <a href="index.html" class="brand">
+      <span class="brand__mark">✦</span>
+      <span class="brand__name">Bisutería Tito</span>
+    </a>
+    <nav class="nav">
+      <a href="#catalogo">Catálogo</a>
+      <a href="#como-comprar">Cómo comprar</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <button class="cart-btn" id="cartBtn" aria-label="Abrir carrito">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+        <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+        <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"></path>
+      </svg>
+      <span class="cart-btn__count" id="cartCount">0</span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero__inner">
+    <p class="hero__eyebrow">Pieza a pieza, hecho a mano</p>
+    <h1 class="hero__title">Accesorios que <em>cuentan</em><br>una historia.</h1>
+    <p class="hero__sub">Aretes, collares, pulseras y anillos seleccionados para acompañar tus momentos. Envíos a todo Ecuador.</p>
+    <a href="#catalogo" class="btn btn--gold">Ver catálogo</a>
+  </div>
+  <div class="hero__deco" aria-hidden="true">
+    <svg viewBox="0 0 200 200" class="hero__ring">
+      <circle cx="100" cy="100" r="92" fill="none" stroke="currentColor" stroke-width="1"/>
+      <circle cx="100" cy="100" r="70" fill="none" stroke="currentColor" stroke-width="1"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ============ FILTROS + CATÁLOGO ============ -->
+<main>
+  <section class="catalogo" id="catalogo">
+    <div class="section-head">
+      <h2>Catálogo</h2>
+      <div class="filtros" id="filtros">
+        <button class="chip chip--activo" data-filtro="todos">Todos</button>
+        <!-- las categorías se insertan aquí por JS -->
+      </div>
+    </div>
+
+    <div class="grid-productos" id="gridProductos">
+      <!-- los productos se insertan aquí por JS -->
+      <p class="estado-vacio" id="estadoCargando">Cargando productos…</p>
+    </div>
+  </section>
+
+  <!-- ============ CÓMO COMPRAR ============ -->
+  <section class="como-comprar" id="como-comprar">
+    <h2>Cómo comprar</h2>
+    <div class="pasos">
+      <div class="paso">
+        <span class="paso__num">1</span>
+        <h3>Arma tu pedido</h3>
+        <p>Agrega tus piezas favoritas al carrito y revisa el total con envío incluido.</p>
+      </div>
+      <div class="paso">
+        <span class="paso__num">2</span>
+        <h3>Elige cómo pagar</h3>
+        <p>PayPal, transferencia a tu banco preferido o contra reembolso al recibir.</p>
+      </div>
+      <div class="paso">
+        <span class="paso__num">3</span>
+        <h3>Confirmamos y enviamos</h3>
+        <p>Verificamos tu pago o pedido y te escribimos para coordinar la entrega.</p>
+      </div>
+    </div>
+
+    <div class="metodos-pago">
+      <h3>Métodos de pago aceptados</h3>
+      <div class="metodos-grid">
+        <div class="metodo-card">
+          <strong>PayPal</strong>
+          <p>Pago inmediato en línea, con tarjeta o saldo PayPal.</p>
+        </div>
+        <div class="metodo-card">
+          <strong>Transferencia bancaria</strong>
+          <p>Pichincha, Guayaquil, Bolivariano, Pacífico, Internacional o Produbanco. Subes tu comprobante y listo.</p>
+        </div>
+        <div class="metodo-card">
+          <strong>Contra reembolso</strong>
+          <p>Pagas en efectivo al recibir tu pedido (sujeto a cobertura).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer" id="contacto">
+  <div class="footer__inner">
+    <div>
+      <p class="brand__name">Bisutería Tito</p>
+      <p class="footer__muted">Accesorios de bisutería hechos para brillar contigo.</p>
+    </div>
+    <div>
+      <p class="footer__heading">Contacto</p>
+      <p id="footerWhatsapp">WhatsApp: —</p>
+      <p id="footerEmail">Email: —</p>
+    </div>
+    <div>
+      <p class="footer__heading">Tienda</p>
+      <a href="admin/login.html" class="footer__admin-link">Acceso administrador</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ PANEL LATERAL DEL CARRITO ============ -->
+<div class="overlay" id="overlay"></div>
+<aside class="cart-panel" id="cartPanel">
+  <div class="cart-panel__head">
+    <h2>Tu carrito</h2>
+    <button id="closeCart" aria-label="Cerrar carrito">✕</button>
+  </div>
+  <div class="cart-panel__items" id="cartItems">
+    <p class="estado-vacio">Tu carrito está vacío.</p>
+  </div>
+  <div class="cart-panel__footer">
+    <div class="cart-panel__row">
+      <span>Subtotal</span>
+      <span id="cartSubtotal">$0.00</span>
+    </div>
+    <div class="cart-panel__row">
+      <span>Envío</span>
+      <span id="cartEnvio">$0.00</span>
+    </div>
+    <div class="cart-panel__row cart-panel__row--total">
+      <span>Total</span>
+      <span id="cartTotal">$0.00</span>
+    </div>
+    <button class="btn btn--gold btn--full" id="goCheckout">Ir a pagar</button>
+  </div>
+</aside>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/carrito.js"></script>
+<script src="assets/js/tienda.js"></script>
+</body>
+</html>
