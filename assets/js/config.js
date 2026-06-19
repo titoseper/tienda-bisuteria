@@ -20,14 +20,14 @@ const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_
 // DATOS DEL NEGOCIO - personaliza esto
 // ============================================================
 const NEGOCIO = {
-  nombre: "Bisutería Fanny Solórzano", // cambia por el nombre real de tu tienda
+  nombre: "DeslumbrArte", // cambia por el nombre real de tu tienda
   whatsapp: "+593 99 695 7447", // tu número con código de país, sin + ni espacios
-  email: "Fanny@hotmail.com",
+  email: "deslumbrarte1@outlook.com",
   costoEnvioFijo: 3.00, // costo de envío estándar
   envioGratisDesde: 50.00, // pedidos sobre este monto, envío gratis
 
   // PayPal: tu email de PayPal (Business) o Client ID si usas el SDK de botones
-  paypalClientId: "TU-PAYPAL-CLIENT-ID",
+  paypalClientId: "sb-ment751095662@business.example.com",
 
   // Cuentas bancarias para transferencia (Ecuador)
   cuentasBancarias: [
