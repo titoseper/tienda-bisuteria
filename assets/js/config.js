@@ -23,7 +23,7 @@ const NEGOCIO = {
   nombre: "DeslumbrArte", // cambia por el nombre real de tu tienda
   whatsapp: "+593 99 695 7447", // tu número con código de país, sin + ni espacios
   email: "deslumbrarte1@outlook.com",
-  costoEnvioFijo: 3.00, // costo de envío estándar
+  costoEnvioFijo: 4.00, // costo de envío estándar
   envioGratisDesde: 50.00, // pedidos sobre este monto, envío gratis
 
   // PayPal: tu email de PayPal (Business) o Client ID si usas el SDK de botones
@@ -42,35 +42,35 @@ const NEGOCIO = {
       banco: "Banco de Guayaquil",
       tipo: "Cuenta de Ahorros",
       numero: "0000000000",
-      titular: "Fanny Solórzano",
+      titular: "Erwin Sagnay",
       cedulaRuc: "0000000000",
     },
     {
       banco: "Banco Bolivariano",
       tipo: "Cuenta de Ahorros",
       numero: "0000000000",
-      titular: "Fanny Solórzano",
+      titular: "Yulissa Ferrin",
       cedulaRuc: "0000000000",
     },
     {
       banco: "Banco del Pacífico",
       tipo: "Cuenta de Ahorros",
       numero: "0000000000",
-      titular: "Fanny Solórzano",
+      titular: "Tanya Mendoza",
       cedulaRuc: "0000000000",
     },
     {
       banco: "Banco Internacional",
       tipo: "Cuenta de Ahorros",
       numero: "0000000000",
-      titular: "Fanny Solórzano",
+      titular: "Simón Rodriguez",
       cedulaRuc: "0000000000",
     },
     {
       banco: "Produbanco",
-      tipo: "Cuenta de Ahorros",
+      tipo: "Cuenta de Corriente",
       numero: "0000000000",
-      titular: "Fanny Solórzano",
+      titular: "DeslumbrArte",
       cedulaRuc: "0000000000",
     },
   ],
