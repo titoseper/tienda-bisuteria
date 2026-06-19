@@ -27,7 +27,7 @@ const NEGOCIO = {
   envioGratisDesde: 50.00, // pedidos sobre este monto, envío gratis
 
   // PayPal: tu email de PayPal (Business) o Client ID si usas el SDK de botones
-  paypalClientId: "sb-ment751095662",
+  paypalClientId: "AY_K8zjKfRGpo5E7n-zEf65aH2HqqDVCbbPqVrbv3Q4BDwREV6SzkNtGaqRlM0aVzuPvgzorruAp4IoG",
 
   // Cuentas bancarias para transferencia (Ecuador)
   cuentasBancarias: [
